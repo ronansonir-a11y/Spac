@@ -41,8 +41,6 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - run: npm ci
       - run: npm run android:sync
-      - run: yes | sdkmanager --licenses > /dev/null
-      - run: sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
       - run: ./gradlew assembleDebug --no-daemon
         working-directory: android
       - name: Package APK
