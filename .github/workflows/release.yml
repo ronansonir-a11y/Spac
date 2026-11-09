@@ -21,7 +21,7 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run android:sync
-      - run: ./gradlew assembleDebug --no-daemon
+      - run: ./gradlew assembleDebug --no-daemon --stacktrace > build.log 2>&1; code=$?; tail -120 build.log; exit $code
         working-directory: android
       - run: cp android/app/build/outputs/apk/debug/app-debug.apk AETHER-6.apk
       - uses: softprops/action-gh-release@v2
