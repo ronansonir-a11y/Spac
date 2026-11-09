@@ -21,7 +21,7 @@ def emblem(size=512):
 
 icon = emblem()
 for folder in ROOT.glob('mipmap-*'):
-    if not folder.is_dir(): continue
+    if not folder.is_dir() or folder.name == 'mipmap-anydpi-v26': continue
     size = {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}.get(folder.name.split('-')[-1], 192)
     for name in ['ic_launcher.png', 'ic_launcher_round.png']:
         icon.resize((size, size), Image.Resampling.LANCZOS).save(folder / name)
