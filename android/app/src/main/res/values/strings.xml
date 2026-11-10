@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AETHER-6</string>
+    <string name="title_activity_main">AETHER-6</string>
+    <string name="package_name">space.aether6.game</string>
+    <string name="custom_url_scheme">space.aether6.game</string>
+</resources>
